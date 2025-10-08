@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, i            <!-- Floating decorative elements -->
+            <div class="floating-elements">
+              <div class="floating-icon nft-icon">🐸</div>
+              <div class="floating-icon nft-icon">👜</div>
+              <div class="floating-icon nft-icon">💎</div>
+            </div>
+    <title>PortalsDeal - Безопасные сделки в Telegram</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Stars animation background -->
+    <div class="stars">
+      <div class="star" style="top: 20%; left: 15%; animation-delay: 0s"></div>
+      <div class="star" style="top: 35%; left: 80%; animation-delay: 1s"></div>
+      <div class="star" style="top: 60%; left: 25%; animation-delay: 2s"></div>
+      <div
+        class="star"
+        style="top: 80%; left: 70%; animation-delay: 0.5s"
+      ></div>
+      <div
+        class="star"
+        style="top: 10%; left: 60%; animation-delay: 1.5s"
+      ></div>
+      <div
+        class="star"
+        style="top: 45%; left: 10%; animation-delay: 2.5s"
+      ></div>
+      <div
+        class="star"
+        style="top: 75%; left: 90%; animation-delay: 0.8s"
+      ></div>
+      <div
+        class="star"
+        style="top: 25%; left: 45%; animation-delay: 1.8s"
+      ></div>
+    </div>
+
+    <main>
+
+      <!-- Home Screen -->
+      <section id="screen-home" class="screen active" aria-labelledby="tab-home">
+        <div class="container">
+          <!-- Desktop Navigation -->
+          <nav class="desktop-nav">
+            <div class="nav-links">
+              <button class="nav-link active" data-target="#screen-home">
+                <span class="nav-icon">🏠</span>
+                Главная
+              </button>
+              <button class="nav-link" data-target="#screen-profile">
+                <span class="nav-icon">👤</span>
+                Профиль
+              </button>
+            </div>
+          </nav>
+
+          <!-- Main Header Section -->
+          <header class="header">
+
+            <!-- Mobile mockup -->
+            <div class="mobile-mockup">
+              <div class="mobile-screen">
+                <div class="mobile-header">
+                  <span>9:41</span>
+                  <div style="display: flex; gap: 4px">
+                    <div
+                      style="
+                        width: 4px;
+                        height: 4px;
+                        background: white;
+                        border-radius: 50%;
+                      "
+                    ></div>
+                    <div
+                      style="
+                        width: 14px;
+                        height: 8px;
+                        border: 1px solid white;
+                        border-radius: 2px;
+                      "
+                    ></div>
+                  </div>
+                </div>
+
+                <div class="collections-title">Collections All items</div>
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 15px;
+                    font-size: 10px;
+                  "
+                >
+                  <span style="color: #999">Search by ID</span>
+                  <div style="display: flex; gap: 6px">
+                    <span>Activity</span>
+                    <span>📄</span>
+                    <span>🔽</span>
+                  </div>
+                </div>
+
+                <div class="item-grid">
+                  <div class="item-card">
+                    �
+                    <div class="item-price">3,050 TON</div>
+                  </div>
+                  <div class="item-card yellow">
+                    🏺
+                    <div class="item-price">Magic Potion</div>
+                  </div>
+                  <div class="item-card">
+                    🎁
+                    <div class="item-price">Gift Box</div>
+                  </div>
+                  <div class="item-card purple">🔮</div>
+                  <div
+                    class="item-card"
+                    style="
+                      background: linear-gradient(135deg, #4dabf7 0%, #37b24d 100%);
+                    "
+                  >
+                    📁
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating decorative elements -->
+            <div class="floating-elements">
+              <div class="floating-icon">⭐</div>
+              <div class="floating-icon">📱</div>
+            </div>
+
+
+
+            <!-- Menu buttons integrated into header -->
+            <div class="menu-wrap">
+              <div class="menu-title">Главное меню</div>
+              <div class="menu">
+                <button class="menu-btn" data-target="#screen-create">
+                  <span class="emoji" aria-hidden="true">✨</span>
+                  Создать сделку
+                </button>
+                <button class="menu-btn" data-target="#screen-requisites">
+                  <span class="emoji" aria-hidden="true">💳</span>
+                  Мои реквизиты
+                </button>
+                <button class="menu-btn menu-btn--support" data-external="https://t.me/IgnoringLynx618">
+                  <span class="emoji" aria-hidden="true">🆘</span>
+                  Поддержка
+                </button>
+              </div>
+            </div>
+            
+
+          </header>
+
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+
+
+            <h3 class="faq-title" data-i18n="faq-title">FAQ</h3>
+
+            <div class="faq-list">
+              <button class="faq-item" onclick="toggleFaq(this)" data-i18n="faq-q1">
+                Как начать торговать подарками?
+              </button>
+              <div class="faq-answer">
+                <p data-i18n="faq-a1">
+                  Чтобы начать торговать подарками, просто нажмите кнопку "Создать сделку" 
+                  и следуйте процессу создания сделки. Вам нужно будет подключить свой Telegram 
+                  аккаунт и подтвердить свою личность.
+                </p>
+              </div>
+
+              <button class="faq-item" onclick="toggleFaq(this)" data-i18n="faq-q2">
+                Что делать, если у меня проблема со сделкой?
+              </button>
+              <div class="faq-answer">
+                <p data-i18n="faq-a2">
+                  Если у вас возникнут проблемы со сделкой, наша служба поддержки доступна 24/7 
+                  для решения любых вопросов. Вы можете связаться с нами через чат поддержки в приложении.
+                </p>
+              </div>
+
+              <button class="faq-item secondary" onclick="toggleFaq(this)" data-i18n="faq-q3">
+                Почему стоит использовать бота для торговли подарками?
+              </button>
+              <div class="faq-answer show">
+                <p data-i18n="faq-a3">
+                  Наш бот предлагает несколько ключевых преимуществ: удобный интерфейс, 
+                  который делает торговлю простой. Безопасные транзакции для защиты ваших 
+                  средств и подарков. Широкий выбор подарков. Отличная поддержка клиентов. 
+                  Это самый простой и безопасный способ торговать подарками в Telegram.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- Create Deal Screen -->
+      <section id="screen-create" class="screen" aria-labelledby="create-title">
+        <div class="form-container">
+          <div class="form-header">
+            <h1 class="form-title">PortalsDeal</h1>
+            <p class="form-subtitle">Безопасные сделки в Telegram</p>
+          </div>
+          
+          <div class="form-wrap">
+            <div class="card">
+              <h2 id="create-title">✨ Создать сделку</h2>
+              <div class="field">
+                <label class="label">Тип сделки:</label>
+                <div class="custom-select" aria-expanded="false">
+                  <button type="button" class="cs-trigger" aria-haspopup="listbox" aria-label="Выбрать тип сделки">
+                    <span class="cs-left"><span class="emoji">🎁</span><span class="cs-value">Подарок</span></span>
+                    <span class="cs-caret">▾</span>
+                  </button>
+                  <ul class="cs-list" role="listbox">
+                    <li class="cs-option selected" role="option" data-value="gift"><span class="emoji">🎁</span>Подарок</li>
+                    <li class="cs-option" role="option" data-value="channel"><span class="emoji">📣</span>Канал/Чат</li>
+                    <li class="cs-option" role="option" data-value="stars"><span class="emoji">⭐</span>Звезды</li>
+                    <li class="cs-option" role="option" data-value="nft"><span class="emoji">👤</span>NFT Юзернейм</li>
+                  </ul>
+                  <input type="hidden" name="dealType" value="gift" />
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Валюта:</label>
+                <div class="custom-select" aria-expanded="false">
+                  <button type="button" class="cs-trigger" aria-haspopup="listbox" aria-label="Выбрать валюту">
+                    <span class="cs-left"><span class="emoji">RU</span><span class="cs-value">RUB</span></span>
+                    <span class="cs-caret">▾</span>
+                  </button>
+                  <ul class="cs-list" role="listbox">
+                    <li class="cs-option selected" role="option" data-value="RUB"><span class="emoji">RU</span>RUB</li>
+                    <li class="cs-option" role="option" data-value="USDT"><span class="emoji">US</span>USDT</li>
+                    <li class="cs-option" role="option" data-value="EUR"><span class="emoji">EU</span>EUR</li>
+                  </ul>
+                  <input type="hidden" name="currency" value="RUB" />
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Сумма:</label>
+                <input class="input-like" type="number" inputmode="decimal" placeholder="Сумма" />
+              </div>
+              <div class="field">
+                <label class="label">Описание сделки:</label>
+                <textarea class="input-like" placeholder="Описание сделки"></textarea>
+              </div>
+              <div class="actions">
+                <div id="status-success" class="alert alert-success">
+                  <p class="title">✅ Сделка создана!</p>
+                  <p style="margin:0">Проверьте чат с ботом для получения ссылки</p>
+                </div>
+                <div id="status-error" class="alert alert-error"></div>
+                <button id="create-submit" class="btn-wide btn-primary">✅ Создать сделку</button>
+                <button class="btn-wide btn-secondary" data-target="#screen-home">⬅ Назад</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Requisites Screen -->
+      <section id="screen-requisites" class="screen" aria-labelledby="req-title">
+        <div class="form-container">
+          <div class="form-header">
+            <h1 class="form-title">PortalsDeal</h1>
+            <p class="form-subtitle">Безопасные сделки в Telegram</p>
+          </div>
+          
+          <div class="form-wrap">
+            <div class="card">
+              <h2 id="req-title" style="display:flex;align-items:center;gap:10px;">
+                <span style="width:14px;height:14px;display:inline-block;background:#7a8bd0;border-radius:4px;"></span>
+                Мои реквизиты
+              </h2>
+              <div style="text-align:center;padding:20px 0 8px;color:#6b778c;">
+                <div style="font-size:44px;">💳</div>
+                <div style="margin-top:10px;font-weight:700;">Реквизиты не установлены</div>
+              </div>
+              <div class="actions">
+                <button class="btn-wide btn-secondary" data-target="#screen-home">⬅ Назад</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom Navigation -->
+      <nav class="tabbar" role="navigation" aria-label="Bottom navigation">
+        <button id="tab-home" class="active" aria-current="page" data-target="#screen-home">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 3l9 8h-3v9h-5v-6H11v6H6v-9H3l9-8z"/>
+            </svg>
+          </span>
+          Главная
+        </button>
+        <button id="tab-profile" data-target="#screen-profile">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5zm0 2c-4.418 0-8 2.239-8 5v2h16v-2c0-2.761-3.582-5-8-5z"/>
+            </svg>
+          </span>
+          Профиль
+        </button>
+      </nav>
+
+      <!-- Profile Screen -->
+      <section id="screen-profile" class="screen" aria-labelledby="tab-profile">
+        <div class="container">
+          <div class="profile-header">
+            <div class="profile-avatar">
+              <div class="avatar-circle">👤</div>
+            </div>
+            <div class="profile-info">
+              <h1 class="profile-name">Пользователь</h1>
+              <p class="profile-id">ID: #123456</p>
+            </div>
+          </div>
+
+          <!-- Balance and Stats Section -->
+          <div class="profile-stats">
+            <div class="stat-card balance-card">
+              <div class="stat-icon">💰</div>
+              <div class="stat-content">
+                <div class="stat-number">€2,450.00</div>
+                <div class="stat-label" data-i18n="balance">Баланс</div>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">🎁</div>
+              <div class="stat-content">
+                <div class="stat-number">12</div>
+                <div class="stat-label" data-i18n="deals-completed">Сделок завершено</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Actions -->
+          <div class="profile-actions">
+            <button class="action-card primary-action" id="btn-top-up">
+              <div class="action-icon">💳</div>
+              <div class="action-content">
+                <h3 data-i18n="top-up-balance">Пополнить баланс</h3>
+                <p data-i18n="top-up-description">Добавить средства на счет</p>
+              </div>
+              <div class="action-arrow">→</div>
+            </button>
+            
+            <button class="action-card" id="btn-statistics" data-target="#screen-statistics">
+              <div class="action-icon">📊</div>
+              <div class="action-content">
+                <h3 data-i18n="statistics">Статистика</h3>
+                <p data-i18n="statistics-description">Подробная информация о ваших сделках</p>
+              </div>
+              <div class="action-arrow">→</div>
+            </button>
+          </div>
+
+          <!-- Settings Section -->
+          <div class="profile-settings">
+            <div class="settings-card">
+              <h3 data-i18n="language-settings">Язык интерфейса</h3>
+              <div class="field">
+                <div class="custom-select" aria-expanded="false">
+                  <button type="button" class="cs-trigger">
+                    <span class="cs-left">
+                      <span class="emoji">🇷🇺</span>
+                      <span class="cs-value">Русский</span>
+                    </span>
+                    <span class="cs-caret">▼</span>
+                  </button>
+                  <ul class="cs-list">
+                    <li class="cs-option selected" data-value="ru">
+                      <span class="emoji">🇷🇺</span>
+                      Русский
+                    </li>
+                    <li class="cs-option" data-value="en">
+                      <span class="emoji">🇺🇸</span>
+                      English
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Statistics Screen -->  
+      <section id="screen-statistics" class="screen" aria-labelledby="btn-statistics">
+        <div class="container">
+          <div class="form-header">
+            <h1 class="form-title" data-i18n="statistics-title">Статистика</h1>
+            <p class="form-subtitle" data-i18n="statistics-subtitle">Подробная информация о ваших сделках</p>
+          </div>
+          
+          <div class="form-wrap">
+            <div class="card">
+              <h2 data-i18n="general-stats">Общая статистика</h2>
+              <div class="profile-stats">
+                <div class="stat-card">
+                  <div class="stat-icon">📊</div>
+                  <div class="stat-content">
+                    <div class="stat-number">12</div>
+                    <div class="stat-label" data-i18n="deals-completed">Проведено сделок</div>
+                  </div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-icon">💰</div>
+                  <div class="stat-content">
+                    <div class="stat-number">€2,450</div>
+                    <div class="stat-label" data-i18n="total-amount">Общая сумма транзакций</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="card" style="margin-top: 2rem;">
+              <h2 data-i18n="recent-deals">Последние сделки</h2>
+              <div class="transactions-list stagger-animation">
+                <div class="transaction-item">
+                  <div class="transaction-icon">✅</div>
+                  <div class="transaction-content">
+                    <div class="transaction-title">Продажа игрового аккаунта</div>
+                    <div class="transaction-details">€150 • 2 дня назад</div>
+                  </div>
+                  <div class="transaction-status success">Завершена</div>
+                </div>
+                <div class="transaction-item">
+                  <div class="transaction-icon">⏳</div>
+                  <div class="transaction-content">
+                    <div class="transaction-title">Покупка NFT</div>
+                    <div class="transaction-details">€75 • 5 дней назад</div>
+                  </div>
+                  <div class="transaction-status pending">В процессе</div>
+                </div>
+                <div class="transaction-item">
+                  <div class="transaction-icon">✅</div>
+                  <div class="transaction-content">
+                    <div class="transaction-title">Обмен криптовалют</div>
+                    <div class="transaction-details">€300 • 1 неделя назад</div>
+                  </div>
+                  <div class="transaction-status success">Завершена</div>
+                </div>
+              </div>
+              
+              <div class="actions">
+                <button type="button" class="btn-wide btn-secondary" id="back-to-profile-stats" data-i18n="back-to-profile">
+                  Назад к профилю
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <script>
+      (function () {
+        const tabbar = document.querySelector('.tabbar');
+        const buttons = Array.from(tabbar.querySelectorAll('button'));
+        const screens = Array.from(document.querySelectorAll('.screen'));
+        
+        // Custom selects functionality
+        document.querySelectorAll('.custom-select').forEach((cs) => {
+          const trigger = cs.querySelector('.cs-trigger');
+          const list = cs.querySelector('.cs-list');
+          const valueSpan = cs.querySelector('.cs-value');
+          const hidden =
