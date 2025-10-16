@@ -1,621 +1,441 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>PortalsDeal - Безопасные сделки</title>
-    <link rel="stylesheet" href="assets/styles.css">
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PortalsDeal - Безопасные сделки в Telegram</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Floating decorative elements moved to body for better rendering -->
+  </head>
+  <body>
     <!-- Stars animation background -->
     <div class="stars">
-        <div class="star" style="top: 20%; left: 15%; animation-delay: 0s"></div>
-        <div class="star" style="top: 35%; left: 80%; animation-delay: 1s"></div>
-        <div class="star" style="top: 60%; left: 25%; animation-delay: 2s"></div>
-        <div class="star" style="top: 80%; left: 70%; animation-delay: 0.5s"></div>
-        <div class="star" style="top: 10%; left: 60%; animation-delay: 1.5s"></div>
-        <div class="star" style="top: 45%; left: 10%; animation-delay: 2.5s"></div>
-        <div class="star" style="top: 75%; left: 90%; animation-delay: 0.8s"></div>
-        <div class="star" style="top: 25%; left: 45%; animation-delay: 1.8s"></div>
+      <div class="star" style="top: 20%; left: 15%; animation-delay: 0s"></div>
+      <div class="star" style="top: 35%; left: 80%; animation-delay: 1s"></div>
+      <div class="star" style="top: 60%; left: 25%; animation-delay: 2s"></div>
+      <div class="star" style="top: 80%; left: 70%; animation-delay: 0.5s"></div>
+      <div class="star" style="top: 10%; left: 60%; animation-delay: 1.5s"></div>
+      <div class="star" style="top: 45%; left: 10%; animation-delay: 2.5s"></div>
+      <div class="star" style="top: 75%; left: 90%; animation-delay: 0.8s"></div>
+      <div class="star" style="top: 25%; left: 45%; animation-delay: 1.8s"></div>
+    </div>
+
+    <div class="floating-elements">
+      <div class="floating-icon nft-icon">🐸</div>
+      <div class="floating-icon nft-icon">👜</div>
+      <div class="floating-icon nft-icon">💎</div>
+      <div class="floating-icon">⭐</div>
+      <div class="floating-icon">📱</div>
     </div>
 
     <main>
-        <!-- Home Screen -->
-        <section id="screen-home" class="screen active" aria-labelledby="tab-home">
-            <div class="container">
-                <!-- Desktop Navigation -->
-                <nav class="desktop-nav">
-                    <div class="nav-links">
-                        <button class="nav-link active" data-target="#screen-home">
-                            <span class="nav-icon">🏠</span>
-                            Главная
-                        </button>
-                        <button class="nav-link" data-target="#screen-profile">
-                            <span class="nav-icon">👤</span>
-                            Профиль
-                        </button>
-                    </div>
-                </nav>
-
-                <!-- Main Header Section -->
-                <header class="header">
-                    <!-- Mobile mockup -->
-                    <div class="mobile-mockup">
-                        <div class="mobile-screen">
-                            <div class="mobile-header">
-                                <span>9:41</span>
-                                <div style="display: flex; gap: 4px">
-                                    <div style="width: 4px; height: 4px; background: white; border-radius: 50%;"></div>
-                                    <div style="width: 14px; height: 8px; border: 1px solid white; border-radius: 2px;"></div>
-                                </div>
-                            </div>
-                            <div class="collections-title">Collections All items</div>
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; font-size: 10px;">
-                                <span style="color: #999">Search by ID</span>
-                                <div style="display: flex; gap: 6px">
-                                    <span>Activity</span>
-                                    <span>📄</span>
-                                    <span>🔽</span>
-                                </div>
-                            </div>
-                            <div class="item-grid">
-                                <div class="item-card">🐸<div class="item-price">3,050 TON</div></div>
-                                <div class="item-card yellow">🏺<div class="item-price">Magic Potion</div></div>
-                                <div class="item-card">🎁<div class="item-price">Gift Box</div></div>
-                                <div class="item-card purple">🔮</div>
-                                <div class="item-card" style="background: linear-gradient(135deg, #4dabf7 0%, #37b24d 100%);">📁</div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Floating decorative elements -->
-                    <div class="floating-elements">
-                        <div class="floating-icon nft-icon">🐸</div>
-                        <div class="floating-icon nft-icon">👜</div>
-                        <div class="floating-icon nft-icon">💎</div>
-                        <div class="floating-icon">⭐</div>
-                        <div class="floating-icon">📱</div>
-                    </div>
-                    <!-- Menu buttons -->
-                    <div class="menu-wrap">
-                        <div class="menu-title">Главное меню</div>
-                        <div class="menu">
-                            <button class="menu-btn" data-target="#screen-create">
-                                <span class="emoji" aria-hidden="true">✨</span>
-                                Создать сделку
-                            </button>
-                            <button class="menu-btn" data-target="#screen-requisites">
-                                <span class="emoji" aria-hidden="true">💳</span>
-                                Мои реквизиты
-                            </button>
-                            <button class="menu-btn menu-btn--support" data-external="https://t.me/Portaldeal">
-                                <span class="emoji" aria-hidden="true">🆘</span>
-                                Поддержка
-                            </button>
-                        </div>
-                    </div>
-                </header>
-                <!-- FAQ Section -->
-                <section class="faq-section">
-                    <h3 class="faq-title" data-i18n="faq-title">FAQ</h3>
-                    <div class="faq-list">
-                        <button class="faq-item" onclick="toggleFaq(this)" data-i18n="faq-q1">Как начать торговать подарками?</button>
-                        <div class="faq-answer">
-                            <p data-i18n="faq-a1">Чтобы начать торговать подарками, просто нажмите кнопку "Создать сделку" и следуйте процессу создания сделки. Вам нужно будет подключить свой Telegram аккаунт и подтвердить свою личность.</p>
-                        </div>
-                        <button class="faq-item" onclick="toggleFaq(this)" data-i18n="faq-q2">Что делать, если у меня проблема со сделкой?</button>
-                        <div class="faq-answer">
-                            <p data-i18n="faq-a2">Если у вас возникнут проблемы со сделкой, наша служба поддержки доступна 24/7 для решения любых вопросов. Вы можете связаться с нами через чат поддержки в приложении: <a href="https://t.me/Portaldeal">@Portaldeal</a>.</p>
-                        </div>
-                        <button class="faq-item secondary" onclick="toggleFaq(this)" data-i18n="faq-q3">Почему стоит использовать бота для торговли подарками?</button>
-                        <div class="faq-answer show">
-                            <p data-i18n="faq-a3">Наш бот предлагает несколько ключевых преимуществ: удобный интерфейс, безопасные транзакции, широкий выбор подарков и отличная поддержка клиентов. Это самый простой и безопасный способ торговать подарками в Telegram.</p>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </section>
-        <!-- Create Deal Screen -->
-        <section id="screen-create" class="screen" aria-labelledby="create-title">
-            <div class="form-container">
-                <div class="form-header">
-                    <h1 class="form-title">PortalsDeal</h1>
-                    <p class="form-subtitle">Безопасные сделки в Telegram</p>
-                </div>
-                <div class="form-wrap">
-                    <div class="card">
-                        <h2 id="create-title">✨ Создать сделку</h2>
-                        <div class="field">
-                            <label class="label">Тип сделки:</label>
-                            <div class="custom-select" aria-expanded="false">
-                                <button type="button" class="cs-trigger" aria-haspopup="listbox" aria-label="Выбрать тип сделки">
-                                    <span class="cs-left"><span class="emoji">🎁</span><span class="cs-value">Подарок</span></span>
-                                    <span class="cs-caret">▾</span>
-                                </button>
-                                <ul class="cs-list" role="listbox">
-                                    <li class="cs-option selected" role="option" data-value="gift"><span class="emoji">🎁</span>Подарок</li>
-                                    <li class="cs-option" role="option" data-value="channel"><span class="emoji">📣</span>Канал/Чат</li>
-                                    <li class="cs-option" role="option" data-value="stars"><span class="emoji">⭐</span>Звезды</li>
-                                    <li class="cs-option" role="option" data-value="nft"><span class="emoji">👤</span>NFT Юзернейм</li>
-                                </ul>
-                                <input type="hidden" name="dealType" value="gift">
-                            </div>
-                        </div>
-                        <div class="field">
-                            <label class="label">Валюта:</label>
-                            <div class="custom-select" aria-expanded="false">
-                                <button type="button" class="cs-trigger" aria-haspopup="listbox" aria-label="Выбрать валюту">
-                                    <span class="cs-left"><span class="emoji">💎</span><span class="cs-value">TON</span></span>
-                                    <span class="cs-caret">▾</span>
-                                </button>
-                                <ul class="cs-list" role="listbox">
-                                    <li class="cs-option" role="option" data-value="RUB"><span class="emoji">🇷🇺</span>RUB</li>
-                                    <li class="cs-option" role="option" data-value="KGS"><span class="emoji">🇰🇬</span>KGS</li>
-                                    <li class="cs-option" role="option" data-value="EUR"><span class="emoji">🇪🇺</span>EUR</li>
-                                    <li class="cs-option" role="option" data-value="IDR"><span class="emoji">🇮🇩</span>IDR</li>
-                                    <li class="cs-option" role="option" data-value="UZS"><span class="emoji">🇺🇿</span>UZS</li>
-                                    <li class="cs-option" role="option" data-value="UAH"><span class="emoji">🇺🇦</span>UAH</li>
-                                    <li class="cs-option" role="option" data-value="KZT"><span class="emoji">🇰🇿</span>KZT</li>
-                                    <li class="cs-option" role="option" data-value="BYN"><span class="emoji">🇧🇾</span>BYN</li>
-                                    <li class="cs-option selected" role="option" data-value="TON"><span class="emoji">💎</span>TON</li>
-                                    <li class="cs-option" role="option" data-value="STARS"><span class="emoji">⭐</span>STARS</li>
-                                </ul>
-                                <input type="hidden" name="currency" value="TON">
-                            </div>
-                        </div>
-                        <div class="field">
-                            <label class="label">Сумма:</label>
-                            <input class="input-like" type="number" inputmode="decimal" placeholder="Сумма" step="0.01" required>
-                        </div>
-                        <div class="field">
-                            <label class="label">Описание сделки:</label>
-                            <textarea class="input-like" placeholder="Описание сделки"></textarea>
-                        </div>
-                        <div class="actions">
-                            <div id="status-success" class="alert alert-success">
-                                <p class="title">✅ Сделка создана!</p>
-                                <p style="margin:0">Проверьте чат с ботом для получения ссылки</p>
-                            </div>
-                            <div id="status-error" class="alert alert-error"></div>
-                            <button id="create-submit" class="btn-wide btn-primary">✅ Создать сделку</button>
-                            <button class="btn-wide btn-secondary" data-target="#screen-home">⬅ Назад</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Requisites Screen -->
-        <section id="screen-requisites" class="screen" aria-labelledby="req-title">
-            <div class="form-container">
-                <div class="form-header">
-                    <h1 class="form-title">PortalsDeal</h1>
-                    <p class="form-subtitle">Безопасные сделки в Telegram</p>
-                </div>
-                <div class="form-wrap">
-                    <div class="card">
-                        <h2 id="req-title" style="display:flex;align-items:center;gap:10px;">
-                            <span style="width:14px;height:14px;display:inline-block;background:#7a8bd0;border-radius:4px;"></span>
-                            Мои реквизиты
-                        </h2>
-                        <div id="requisites-content" style="text-align:center;padding:20px 0 8px;color:#6b778c;">
-                            <div style="font-size:44px;">💳</div>
-                            <div style="margin-top:10px;font-weight:700;">Реквизиты не установлены</div>
-                        </div>
-                        <div class="actions">
-                            <button id="add-requisites" class="btn-wide btn-primary">➕ Добавить реквизиты</button>
-                            <button class="btn-wide btn-secondary" data-target="#screen-home">⬅ Назад</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Profile Screen -->
-        <section id="screen-profile" class="screen" aria-labelledby="tab-profile">
-            <div class="container">
-                <div class="profile-header">
-                    <div class="profile-avatar">
-                        <div class="avatar-circle">👤</div>
-                    </div>
-                    <div class="profile-info">
-                        <h1 class="profile-name"></h1>
-                        <p class="profile-id"></p>
-                    </div>
-                </div>
-                <div class="profile-stats">
-                    <div class="stat-card balance-card">
-                        <div class="stat-icon">💰</div>
-                        <div class="stat-content">
-                            <div class="stat-number" id="profile-balance">0.00</div>
-                            <div class="stat-label" data-i18n="balance">Баланс</div>
-                        </div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon">🎁</div>
-                        <div class="stat-content">
-                            <div class="stat-number" id="profile-deals">0</div>
-                            <div class="stat-label" data-i18n="deals-completed">Сделок завершено</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="profile-actions">
-                    <button class="action-card primary-action" id="btn-top-up">
-                        <div class="action-icon">💳</div>
-                        <div class="action-content">
-                            <h3 data-i18n="top-up-balance">Пополнить баланс</h3>
-                            <p data-i18n="top-up-description">Добавить средства на счет</p>
-                        </div>
-                        <div class="action-arrow">→</div>
-                    </button>
-                    <button class="action-card" id="btn-statistics" data-target="#screen-statistics">
-                        <div class="action-icon">📊</div>
-                        <div class="action-content">
-                            <h3 data-i18n="statistics">Статистика</h3>
-                            <p data-i18n="statistics-description">Подробная информация о ваших сделках</p>
-                        </div>
-                        <div class="action-arrow">→</div>
-                    </button>
-                </div>
-                <div class="profile-settings">
-                    <div class="settings-card">
-                        <h3 data-i18n="language-settings">Изменить язык</h3>
-                        <div class="field">
-                            <div class="custom-select" aria-expanded="false">
-                                <button type="button" class="cs-trigger">
-                                    <span class="cs-left">
-                                        <span class="emoji">🇷🇺</span>
-                                        <span class="cs-value">Русский</span>
-                                    </span>
-                                    <span class="cs-caret">▼</span>
-                                </button>
-                                <ul class="cs-list">
-                                    <li class="cs-option selected" data-value="ru">
-                                        <span class="emoji">🇷🇺</span>
-                                        Русский
-                                    </li>
-                                    <li class="cs-option" data-value="en">
-                                        <span class="emoji">🇺🇸</span>
-                                        English
-                                    </li>
-                                </ul>
-                                <input type="hidden" name="language" value="ru">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Statistics Screen -->
-        <section id="screen-statistics" class="screen" aria-labelledby="btn-statistics">
-            <div class="container">
-                <div class="form-header">
-                    <h1 class="form-title" data-i18n="statistics-title">Статистика</h1>
-                    <p class="form-subtitle" data-i18n="statistics-subtitle">Подробная информация о ваших сделках</p>
-                </div>
-                <div class="form-wrap">
-                    <div class="card">
-                        <h2 data-i18n="general-stats">Общая статистика</h2>
-                        <div class="profile-stats">
-                            <div class="stat-card">
-                                <div class="stat-icon">📊</div>
-                                <div class="stat-content">
-                                    <div class="stat-number" id="stats-deals">0</div>
-                                    <div class="stat-label" data-i18n="deals-completed">Проведено сделок</div>
-                                </div>
-                            </div>
-                            <div class="stat-card">
-                                <div class="stat-icon">💰</div>
-                                <div class="stat-content">
-                                    <div class="stat-number" id="stats-total-amount">0</div>
-                                    <div class="stat-label" data-i18n="total-amount">Общая сумма транзакций</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card" style="margin-top: 2rem;">
-                        <h2 data-i18n="recent-deals">Последние сделки</h2>
-                        <div class="transactions-list stagger-animation" id="recent-deals"></div>
-                        <div class="actions">
-                            <button type="button" class="btn-wide btn-secondary" id="back-to-profile-stats" data-i18n="back-to-profile">Назад к профилю</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Bottom Navigation -->
-        <nav class="tabbar" role="navigation" aria-label="Bottom navigation">
-            <button id="tab-home" class="active" aria-current="page" data-target="#screen-home">
-                <span class="icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M12 3l9 8h-3v9h-5v-6H11v6H6v-9H3l9-8z"/>
-                    </svg>
-                </span>
+      <!-- Home Screen -->
+      <section id="screen-home" class="screen active" aria-labelledby="tab-home">
+        <div class="container">
+          <!-- Desktop Navigation -->
+          <nav class="desktop-nav">
+            <div class="nav-links">
+              <button class="nav-link active" data-target="#screen-home">
+                <span class="nav-icon">🏠</span>
                 Главная
-            </button>
-            <button id="tab-profile" data-target="#screen-profile">
-                <span class="icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5zm0 2c-4.418 0-8 2.239-8 5v2h16v-2c0-2.761-3.582-5-8-5z"/>
-                    </svg>
-                </span>
+              </button>
+              <button class="nav-link" data-target="#screen-profile">
+                <span class="nav-icon">👤</span>
                 Профиль
+              </button>
+            </div>
+          </nav>
+
+          <!-- Main Header Section -->
+          <header class="header">
+            <!-- Mobile mockup -->
+            <div class="mobile-mockup">
+              <div class="mobile-screen">
+                <div class="mobile-header">
+                  <span>9:41</span>
+                  <div style="display: flex; gap: 4px">
+                    <div style="width: 4px; height: 4px; background: white; border-radius: 50%;"></div>
+                    <div style="width: 14px; height: 8px; border: 1px solid white; border-radius: 2px;"></div>
+                  </div>
+                </div>
+                <div class="collections-title">Collections All items</div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; font-size: 10px;">
+                  <span style="color: #999">Search by ID</span>
+                  <div style="display: flex; gap: 6px">
+                    <span>Activity</span>
+                    <span>📄</span>
+                    <span>🔽</span>
+                  </div>
+                </div>
+                <div class="item-grid">
+                  <div class="item-card">
+                    <div class="item-price">3,050 TON</div>
+                  </div>
+                  <div class="item-card yellow">
+                    🏺
+                    <div class="item-price">Magic Potion</div>
+                  </div>
+                  <div class="item-card">
+                    🎁
+                    <div class="item-price">Gift Box</div>
+                  </div>
+                  <div class="item-card purple">🔮</div>
+                  <div class="item-card" style="background: linear-gradient(135deg, #4dabf7 0%, #37b24d 100%);">
+                    📁
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Menu buttons integrated into header -->
+            <div class="menu-wrap">
+              <div class="menu-title">Главное меню</div>
+              <div class="menu">
+                <button class="menu-btn" data-target="#screen-create">
+                  <span class="emoji" aria-hidden="true">✨</span>
+                  Создать сделку
+                </button>
+                <button class="menu-btn" data-target="#screen-requisites">
+                  <span class="emoji" aria-hidden="true">💳</span>
+                  Мои реквизиты
+                </button>
+                <button class="menu-btn menu-btn--support" data-external="https://t.me/IgnoringLynx618">
+                  <span class="emoji" aria-hidden="true">🆘</span>
+                  Поддержка
+                </button>
+              </div>
+            </div>
+          </header>
+
+          <!-- FAQ Section -->
+          <section class="faq-section">
+            <h3 class="faq-title" data-i18n="faq-title">FAQ</h3>
+            <div class="faq-list">
+              <button class="faq-item" onclick="toggleFaq(this)" data-i18n="faq-q1">
+                Как начать торговать подарками?
+              </button>
+              <div class="faq-answer">
+                <p data-i18n="faq-a1">
+                  Чтобы начать торговать подарками, просто нажмите кнопку "Создать сделку" 
+                  и следуйте процессу создания сделки. Вам нужно будет подключить свой Telegram 
+                  аккаунт и подтвердить свою личность.
+                </p>
+              </div>
+              <button class="faq-item" onclick="toggleFaq(this)" data-i18n="faq-q2">
+                Что делать, если у меня проблема со сделкой?
+              </button>
+              <div class="faq-answer">
+                <p data-i18n="faq-a2">
+                  Если у вас возникнут проблемы со сделкой, наша служба поддержки доступна 24/7 
+                  для решения любых вопросов. Вы можете связаться с нами через чат поддержки в приложении.
+                </p>
+              </div>
+              <button class="faq-item secondary" onclick="toggleFaq(this)" data-i18n="faq-q3">
+                Почему стоит использовать бота для торговли подарками?
+              </button>
+              <div class="faq-answer show">
+                <p data-i18n="faq-a3">
+                  Наш бот предлагает несколько ключевых преимуществ: удобный интерфейс, 
+                  который делает торговлю простой. Безопасные транзакции для защиты ваших 
+                  средств и подарков. Широкий выбор подарков. Отличная поддержка клиентов. 
+                  Это самый простой и безопасный способ торговать подарками в Telegram.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <!-- Create Deal Screen -->
+      <section id="screen-create" class="screen" aria-labelledby="create-title">
+        <div class="form-container">
+          <div class="form-header">
+            <h1 class="form-title">PortalsDeal</h1>
+            <p class="form-subtitle">Безопасные сделки в Telegram</p>
+          </div>
+          <div class="form-wrap">
+            <div class="card">
+              <h2 id="create-title">✨ Создать сделку</h2>
+              <div class="field">
+                <label class="label">Тип сделки:</label>
+                <div class="custom-select" aria-expanded="false">
+                  <button type="button" class="cs-trigger" aria-haspopup="listbox" aria-label="Выбрать тип сделки">
+                    <span class="cs-left"><span class="emoji">🎁</span><span class="cs-value">Подарок</span></span>
+                    <span class="cs-caret">▾</span>
+                  </button>
+                  <ul class="cs-list" role="listbox">
+                    <li class="cs-option selected" role="option" data-value="gift"><span class="emoji">🎁</span>Подарок</li>
+                    <li class="cs-option" role="option" data-value="channel"><span class="emoji">📣</span>Канал/Чат</li>
+                    <li class="cs-option" role="option" data-value="stars"><span class="emoji">⭐</span>Звезды</li>
+                    <li class="cs-option" role="option" data-value="nft"><span class="emoji">👤</span>NFT Юзернейм</li>
+                  </ul>
+                  <input type="hidden" name="dealType" value="gift" />
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Валюта:</label>
+                <div class="custom-select" aria-expanded="false">
+                  <button type="button" class="cs-trigger" aria-haspopup="listbox" aria-label="Выбрать валюту">
+                    <span class="cs-left"><span class="emoji">RU</span><span class="cs-value">RUB</span></span>
+                    <span class="cs-caret">▾</span>
+                  </button>
+                  <ul class="cs-list" role="listbox">
+                    <li class="cs-option selected" role="option" data-value="RUB"><span class="emoji">RU</span>RUB</li>
+                    <li class="cs-option" role="option" data-value="USDT"><span class="emoji">US</span>USDT</li>
+                    <li class="cs-option" role="option" data-value="EUR"><span class="emoji">EU</span>EUR</li>
+                  </ul>
+                  <input type="hidden" name="currency" value="RUB" />
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Сумма:</label>
+                <input class="input-like" type="number" inputmode="decimal" placeholder="Сумма" />
+              </div>
+              <div class="field">
+                <label class="label">Описание сделки:</label>
+                <textarea class="input-like" placeholder="Описание сделки"></textarea>
+              </div>
+              <div class="actions">
+                <div id="status-success" class="alert alert-success">
+                  <p class="title">✅ Сделка создана!</p>
+                  <p style="margin:0">Проверьте чат с ботом для получения ссылки</p>
+                </div>
+                <div id="status-error" class="alert alert-error"></div>
+                <button id="create-submit" class="btn-wide btn-primary">✅ Создать сделку</button>
+                <button class="btn-wide btn-secondary" data-target="#screen-home">⬅ Назад</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Requisites Screen -->
+      <section id="screen-requisites" class="screen" aria-labelledby="req-title">
+        <div class="form-container">
+          <div class="form-header">
+            <h1 class="form-title">PortalsDeal</h1>
+            <p class="form-subtitle">Безопасные сделки в Telegram</p>
+          </div>
+          <div class="form-wrap">
+            <div class="card">
+              <h2 id="req-title" style="display:flex;align-items:center;gap:10px;">
+                <span style="width:14px;height:14px;display:inline-block;background:#7a8bd0;border-radius:4px;"></span>
+                Мои реквизиты
+              </h2>
+              <div style="text-align:center;padding:20px 0 8px;color:#6b778c;">
+                <div style="font-size:44px;">💳</div>
+                <div style="margin-top:10px;font-weight:700;">Реквизиты не установлены</div>
+              </div>
+              <div class="actions">
+                <button class="btn-wide btn-secondary" data-target="#screen-home">⬅ Назад</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom Navigation -->
+      <nav class="tabbar" role="navigation" aria-label="Bottom navigation">
+        <button id="tab-home" class="active" aria-current="page" data-target="#screen-home">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 3l9 8h-3v9h-5v-6H11v6H6v-9H3l9-8z"/>
+            </svg>
+          </span>
+          Главная
+        </button>
+        <button id="tab-profile" data-target="#screen-profile">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5zm0 2c-4.418 0-8 2.239-8 5v2h16v-2c0-2.761-3.582-5-8-5z"/>
+            </svg>
+          </span>
+          Профиль
+        </button>
+      </nav>
+
+      <!-- Profile Screen -->
+      <section id="screen-profile" class="screen" aria-labelledby="tab-profile">
+        <div class="container">
+          <div class="profile-header">
+            <div class="profile-avatar">
+              <div class="avatar-circle">👤</div>
+            </div>
+            <div class="profile-info">
+              <h1 class="profile-name">Пользователь</h1>
+              <p class="profile-id">ID: #123456</p>
+            </div>
+          </div>
+          <div class="profile-stats">
+            <div class="stat-card balance-card">
+              <div class="stat-icon">💰</div>
+              <div class="stat-content">
+                <div class="stat-number">€2,450.00</div>
+                <div class="stat-label" data-i18n="balance">Баланс</div>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">🎁</div>
+              <div class="stat-content">
+                <div class="stat-number">12</div>
+                <div class="stat-label" data-i18n="deals-completed">Сделок завершено</div>
+              </div>
+            </div>
+          </div>
+          <div class="profile-actions">
+            <button class="action-card primary-action" id="btn-top-up">
+              <div class="action-icon">💳</div>
+              <div class="action-content">
+                <h3 data-i18n="top-up-balance">Пополнить баланс</h3>
+                <p data-i18n="top-up-description">Добавить средства на счет</p>
+              </div>
+              <div class="action-arrow">→</div>
             </button>
-        </nav>
-    </main>
+            <button class="action-card" id="btn-statistics" data-target="#screen-statistics">
+              <div class="action-icon">📊</div>
+              <div class="action-content">
+                <h3 data-i18n="statistics">Статистика</h3>
+                <p data-i18n="statistics-description">Подробная информация о ваших сделках</p>
+              </div>
+              <div class="action-arrow">→</div>
+            </button>
+          </div>
+          <div class="profile-settings">
+            <div class="settings-card">
+              <h3 data-i18n="language-settings">Язык интерфейса</h3>
+              <div class="field">
+                <div class="custom-select" aria-expanded="false">
+                  <button type="button" class="cs-trigger">
+                    <span class="cs-left">
+                      <span class="emoji">🇷🇺</span>
+                      <span class="cs-value">Русский</span>
+                    </span>
+                    <span class="cs-caret">▼</span>
+                  </button>
+                  <ul class="cs-list">
+                    <li class="cs-option selected" data-value="ru">
+                      <span class="emoji">🇷🇺</span>
+                      Русский
+                    </li>
+                    <li class="cs-option" data-value="en">
+                      <span class="emoji">🇺🇸</span>
+                      English
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Statistics Screen -->  
+      <section id="screen-statistics" class="screen" aria-labelledby="btn-statistics">
+        <div class="container">
+          <div class="form-header">
+            <h1 class="form-title" data-i18n="statistics-title">Статистика</h1>
+            <p class="form-subtitle" data-i18n="statistics-subtitle">Подробная информация о ваших сделках</p>
+          </div>
+          <div class="form-wrap">
+            <div class="card">
+              <h2 data-i18n="general-stats">Общая статистика</h2>
+              <div class="profile-stats">
+                <div class="stat-card">
+                  <div class="stat-icon">📊</div>
+                  <div class="stat-content">
+                    <div class="stat-number">12</div>
+                    <div class="stat-label" data-i18n="deals-completed">Проведено сделок</div>
+                  </div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-icon">💰</div>
+                  <div class="stat-content">
+                    <div class="stat-number">€2,450</div>
+                    <div class="stat-label" data-i18n="total-amount">Общая сумма транзакций</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card" style="margin-top: 2rem;">
+              <h2 data-i18n="recent-deals">Последние сделки</h2>
+              <div class="transactions-list stagger-animation">
+                <div class="transaction-item">
+                  <div class="transaction-icon">✅</div>
+                  <div class="transaction-content">
+                    <div class="transaction-title">Продажа игрового аккаунта</div>
+                    <div class="transaction-details">€150 • 2 дня назад</div>
+                  </div>
+                  <div class="transaction-status success">Завершена</div>
+                </div>
+                <div class="transaction-item">
+                  <div class="transaction-icon">⏳</div>
+                  <div class="transaction-content">
+                    <div class="transaction-title">Покупка NFT</div>
+                    <div class="transaction-details">€75 • 5 дней назад</div>
+                  </div>
+                  <div class="transaction-status pending">В процессе</div>
+                </div>
+                <div class="transaction-item">
+                  <div class="transaction-icon">✅</div>
+                  <div class="transaction-content">
+                    <div class="transaction-title">Обмен криптовалют</div>
+                    <div class="transaction-details">€300 • 1 неделя назад</div>
+                  </div>
+                  <div class="transaction-status success">Завершена</div>
+                </div>
+              </div>
+              <div class="actions">
+                <button type="button" class="btn-wide btn-secondary" id="back-to-profile-stats" data-i18n="back-to-profile">
+                  Назад к профилю
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
     <script>
-        Telegram.WebApp.ready();
-        const user = Telegram.WebApp.initDataUnsafe.user || { id: null, username: 'N/A' };
-        const userId = user.id;
-        const username = user.username || 'N/A';
-
-        // Language translations
-        const translations = {
-            ru: {
-                profile: 'Профиль',
-                statistics: 'Статистика',
-                balance: 'Баланс',
-                'deals-completed': 'Сделок завершено',
-                'top-up-balance': 'Пополнить баланс',
-                'top-up-description': 'Добавить средства на счет',
-                'statistics-description': 'Подробная информация о ваших сделках',
-                'language-settings': 'Изменить язык',
-                'back-to-profile': 'Назад к профилю',
-                'statistics-title': 'Статистика',
-                'statistics-subtitle': 'Подробная информация о ваших сделках',
-                'general-stats': 'Общая статистика',
-                'total-amount': 'Общая сумма транзакций',
-                'recent-deals': 'Последние сделки',
-                'faq-title': 'FAQ',
-                'faq-q1': 'Как начать торговать подарками?',
-                'faq-a1': 'Чтобы начать торговать подарками, просто нажмите кнопку "Создать сделку" и следуйте процессу создания сделки. Вам нужно будет подключить свой Telegram аккаунт и подтвердить свою личность.',
-                'faq-q2': 'Что делать, если у меня проблема со сделкой?',
-                'faq-a2': 'Если у вас возникнут проблемы со сделкой, наша служба поддержки доступна 24/7 для решения любых вопросов. Вы можете связаться с нами через чат поддержки в приложении: <a href="https://t.me/Portaldeal">@Portaldeal</a>.',
-                'faq-q3': 'Почему стоит использовать бота для торговли подарками?',
-                'faq-a3': 'Наш бот предлагает несколько ключевых преимуществ: удобный интерфейс, безопасные транзакции, широкий выбор подарков и отличная поддержка клиентов. Это самый простой и безопасный способ торговать подарками в Telegram.'
-            },
-            en: {
-                profile: 'Profile',
-                statistics: 'Statistics',
-                balance: 'Balance',
-                'deals-completed': 'Deals completed',
-                'top-up-balance': 'Top up balance',
-                'top-up-description': 'Add funds to account',
-                'statistics-description': 'Detailed information about your deals',
-                'language-settings': 'Change language',
-                'back-to-profile': 'Back to profile',
-                'statistics-title': 'Statistics',
-                'statistics-subtitle': 'Detailed information about your deals',
-                'general-stats': 'General statistics',
-                'total-amount': 'Total transaction amount',
-                'recent-deals': 'Recent deals',
-                'faq-title': 'FAQ',
-                'faq-q1': 'How do I start trading gifts?',
-                'faq-a1': 'To start trading gifts, simply click the "Create Deal" button and follow the deal creation process. You\'ll need to connect your Telegram account and verify your identity.',
-                'faq-q2': 'What if I have a problem with a trade?',
-                'faq-a2': 'If you encounter any issues with a trade, our support team is available 24/7 to help resolve any problems. You can contact us through the support chat in the app: <a href="https://t.me/Portaldeal">@Portaldeal</a>.',
-                'faq-q3': 'Why should I use bot for trading gifts?',
-                'faq-a3': 'Our bot offers several key benefits: A user-friendly interface, secure transactions, a wide variety of gifts, and excellent customer support. It\'s the easiest and safest way to trade gifts within Telegram.'
-            }
-        };
-
-        let currentLanguage = localStorage.getItem('lang') || 'ru';
-
-        // Update UI based on language
-        function switchLanguage(language) {
-            currentLanguage = language;
-            localStorage.setItem('lang', language);
-            const texts = translations[language];
-            Object.keys(texts).forEach(key => {
-                const elements = document.querySelectorAll(`[data-i18n="${key}"]`);
-                elements.forEach(el => {
-                    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-                        el.placeholder = texts[key];
-                    } else {
-                        el.innerHTML = texts[key];
-                    }
-                });
-            });
-        }
-
-        // Fetch profile data
-        function fetchProfileData() {
-            Telegram.WebApp.sendData(JSON.stringify({ action: 'get_profile', userId }));
-            Telegram.WebApp.onEvent('webAppData', (data) => {
-                try {
-                    const profile = JSON.parse(data);
-                    document.querySelector('.profile-name').textContent = profile.username || 'N/A';
-                    document.querySelector('.profile-id').textContent = `ID: #${profile.userId || '123456'}`;
-                    document.querySelector('#profile-balance').textContent = `${profile.balance.toFixed(2)} TON`;
-                    document.querySelector('#profile-deals').textContent = profile.deals;
-                } catch (e) {
-                    console.error('Error parsing profile data:', e);
-                }
-            });
-        }
-
-        // Fetch statistics data
-        function fetchStatsData() {
-            Telegram.WebApp.sendData(JSON.stringify({ action: 'get_stats', userId }));
-            Telegram.WebApp.onEvent('webAppData', (data) => {
-                try {
-                    const stats = JSON.parse(data);
-                    document.querySelector('#stats-deals').textContent = stats.deals;
-                    document.querySelector('#stats-total-amount').textContent = `${stats.totalAmount.toFixed(2)} TON`;
-                    const recentDeals = document.querySelector('#recent-deals');
-                    recentDeals.innerHTML = stats.recentDeals.map(deal => `
-                        <div class="transaction-item">
-                            <div class="transaction-icon">${deal.status === 'finished' ? '✅' : '⏳'}</div>
-                            <div class="transaction-content">
-                                <div class="transaction-title">${deal.title}</div>
-                                <div class="transaction-details">${deal.amount.toFixed(2)} TON • ${deal.date}</div>
-                            </div>
-                            <div class="transaction-status ${deal.status === 'finished' ? 'success' : 'pending'}">
-                                ${currentLanguage === 'ru' ? (deal.status === 'finished' ? 'Завершена' : 'В процессе') : (deal.status === 'finished' ? 'Completed' : 'Pending')}
-                            </div>
-                        </div>
-                    `).join('');
-                } catch (e) {
-                    console.error('Error parsing stats data:', e);
-                }
-            });
-        }
-
-        // Fetch requisites data
-        function fetchRequisitesData() {
-            Telegram.WebApp.sendData(JSON.stringify({ action: 'get_requisites', userId }));
-            Telegram.WebApp.onEvent('webAppData', (data) => {
-                try {
-                    const requisites = JSON.parse(data);
-                    const content = document.querySelector('#requisites-content');
-                    if (requisites.length === 0) {
-                        content.innerHTML = `
-                            <div style="font-size:44px;">💳</div>
-                            <div style="margin-top:10px;font-weight:700;">Реквизиты не установлены</div>
-                        `;
-                    } else {
-                        content.innerHTML = requisites.map(req => `
-                            <div style="text-align:left;padding:10px;border-bottom:1px solid rgba(255,255,255,0.2);">
-                                <div style="font-weight:700;color:#ffffff;">${req.type}</div>
-                                <div style="color:#b8c5d1;">${req.value} (${req.currency})</div>
-                            </div>
-                        `).join('');
-                    }
-                } catch (e) {
-                    console.error('Error parsing requisites data:', e);
-                }
-            });
-        }
-
-        // Tabbar navigation
+      (function () {
         const tabbar = document.querySelector('.tabbar');
         const buttons = Array.from(tabbar.querySelectorAll('button'));
         const screens = Array.from(document.querySelectorAll('.screen'));
+        
+        // Custom selects functionality
+        document.querySelectorAll('.custom-select').forEach((cs) => {
+          const trigger = cs.querySelector('.cs-trigger');
+          const list = cs.querySelector('.cs-list');
+          const valueSpan = cs.querySelector('.cs-value');
+          const hidden = cs.querySelector('input[type="hidden"]');
 
-        function activate(targetSelector) {
-            buttons.forEach(btn => {
-                const isActive = btn.getAttribute('data-target') === targetSelector;
-                btn.classList.toggle('active', isActive);
-                btn.setAttribute('aria-current', isActive ? 'page' : 'false');
+          trigger.addEventListener('click', () => {
+            const expanded = cs.getAttribute('aria-expanded') === 'true';
+            document.querySelectorAll('.custom-select[aria-expanded="true"]').forEach(el => { 
+              if (el !== cs) el.setAttribute('aria-expanded', 'false'); 
             });
-            document.querySelectorAll('.nav-link').forEach(btn => {
-                btn.classList.toggle('active', btn.getAttribute('data-target') === targetSelector);
-            });
-            screens.forEach(section => {
-                const isActive = '#' + section.id === targetSelector;
-                section.classList.toggle('active', isActive);
-                if (isActive) {
-                    resetScreenAnimations(section);
-                    if (section.id === 'screen-profile') fetchProfileData();
-                    if (section.id === 'screen-statistics') fetchStatsData();
-                    if (section.id === 'screen-requisites') fetchRequisitesData();
-                }
-            });
-        }
+            cs.setAttribute('aria-expanded', String(!expanded));
+          });
 
-        // Reset animations for active screen
-        function resetScreenAnimations(screen) {
-            if (screen.id === 'screen-profile') {
-                const elements = [
-                    { el: screen.querySelector('.profile-header'), anim: 'fadeInUp 0.8s ease-out 0.2s forwards' },
-                    { el: screen.querySelector('.avatar-circle'), anim: 'scaleIn 0.6s ease-out 0.4s forwards' },
-                    { el: screen.querySelector('.profile-stats'), anim: 'fadeInUp 0.8s ease-out 0.6s forwards' },
-                    { el: screen.querySelector('.profile-actions'), anim: 'fadeInUp 0.8s ease-out 0.8s forwards' }
-                ];
-                elements.forEach(({ el, anim }) => {
-                    if (el) {
-                        el.style.animation = 'none';
-                        el.offsetHeight;
-                        el.style.animation = anim;
-                    }
-                });
-            }
-            if (screen.id === 'screen-statistics' || screen.id === 'screen-requisites') {
-                const formHeader = screen.querySelector('.form-header');
-                const cards = screen.querySelectorAll('.card');
-                const buttons = screen.querySelectorAll('.btn-primary, .btn-secondary');
-                if (formHeader) {
-                    formHeader.style.animation = 'none';
-                    formHeader.offsetHeight;
-                    formHeader.style.animation = 'fadeInDown 0.8s ease-out 0.1s forwards';
-                }
-                cards.forEach((card, index) => {
-                    card.style.animation = 'none';
-                    card.offsetHeight;
-                    card.style.animation = `fadeInUp 0.8s ease-out ${0.3 + index * 0.2}s forwards`;
-                });
-                buttons.forEach((button, index) => {
-                    button.style.animation = 'none';
-                    button.offsetHeight;
-                    button.style.animation = `fadeInUp 0.6s ease-out ${0.5 + index * 0.1}s forwards`;
-                });
-            }
-            const staggerElements = screen.querySelectorAll('.stagger-animation');
-            staggerElements.forEach(container => {
-                Array.from(container.children).forEach((child, index) => {
-                    child.style.animation = 'none';
-                    child.offsetHeight;
-                    child.style.animation = `fadeInUp 0.6s ease-out ${0.1 * (index + 1)}s forwards`;
-                });
-            });
-        }
+          list.addEventListener('click', (e) => {
+            const option = e.target.closest('.cs-option');
+            if (!option) return;
+            list.querySelectorAll('.cs-option').forEach(o => o.classList.toggle('selected', o === option));
+            const optEmoji = option.querySelector('.emoji')?.textContent || '';
+            const triggerEmojiSpan = trigger.querySelector('.emoji');
+            if (triggerEmojiSpan) triggerEmojiSpan.textContent = optEmoji;
+            valueSpan.textContent = option.textContent.replace(optEmoji, '').trim();
+            hidden.value = option.getAttribute('data-value');
+            cs.setAttribute('aria-expanded', 'false');
+          });
 
-        // Navigation handlers
-        tabbar.addEventListener('click', e => {
-            const btn = e.target.closest('button');
-            if (btn && btn.getAttribute('data-target')) activate(btn.getAttribute('data-target'));
+          document.addEventListener('click', (e) => {
+            if (!cs.contains(e.target)) cs.setAttribute('aria-expanded', 'false');
+          });
         });
 
-        document.addEventListener('click', e => {
-            const navBtn = e.target.closest('[data-target]');
-            if (navBtn) activate(navBtn.getAttribute('data-target'));
-            const ext = e.target.closest('[data-external]');
-            if (ext) window.open(ext.getAttribute('data-external'), '_blank');
-        });
-
-        // FAQ toggle
-        window.toggleFaq = function(button) {
-            const answer = button.nextElementSibling;
-            document.querySelectorAll('.faq-answer').forEach(ans => ans.classList.remove('show'));
-            if (!answer.classList.contains('show')) answer.classList.add('show');
-        };
-
-        // Custom select functionality
-        document.querySelectorAll('.custom-select').forEach(cs => {
-            const trigger = cs.querySelector('.cs-trigger');
-            const list = cs.querySelector('.cs-list');
-            const valueSpan = cs.querySelector('.cs-value');
-            const hidden = cs.querySelector('input[type="hidden"]');
-
-            trigger.addEventListener('click', () => {
-                const expanded = cs.getAttribute('aria-expanded') === 'true';
-                document.querySelectorAll('.custom-select[aria-expanded="true"]').forEach(el => {
-                    if (el !== cs) el.setAttribute('aria-expanded', 'false');
-                });
-                cs.setAttribute('aria-expanded', !expanded);
-            });
-
-            list.addEventListener('click', e => {
-                const option = e.target.closest('.cs-option');
-                if (!option) return;
-                list.querySelectorAll('.cs-option').forEach(o => o.classList.toggle('selected', o === option));
-                const optEmoji = option.querySelector('.emoji')?.textContent || '';
-                const triggerEmojiSpan = trigger.querySelector('.emoji');
-                if (triggerEmojiSpan) triggerEmojiSpan.textContent = optEmoji;
-                valueSpan.textContent = option.textContent.replace(optEmoji, '').trim();
-                hidden.value = option.getAttribute('data-value');
-                cs.setAttribute('aria-expanded', 'false');
-                if (hidden.name === 'language') {
-                    switchLanguage(hidden.value);
-                    Telegram.WebApp.sendData(JSON.stringify({ action: 'set_language', userId, language: hidden.value }));
-                }
-            });
-
-            document.addEventListener('click', e => {
-                if (!cs.contains(e.target)) cs.setAttribute('aria-expanded', 'false');
-            });
-        });
-
-        // Create deal submission
-        document.getElementById('create-submit').addEventListener('click', () => {
+        // Form validation & success
+        const submitBtn = document.getElementById('create-submit');
+        if (submitBtn) {
+          submitBtn.addEventListener('click', function () {
             const amountInput = document.querySelector('#screen-create .input-like[type="number"]');
             const descInput = document.querySelector('#screen-create textarea.input-like');
             const success = document.getElementById('status-success');
@@ -625,65 +445,198 @@
             error.classList.remove('show');
             error.textContent = '';
 
-            const amount = amountInput.value.trim();
-            const desc = descInput.value.trim();
+            const hasAmount = amountInput && String(amountInput.value).trim() !== '';
+            const descLen = descInput ? descInput.value.trim().length : 0;
 
-            if (!amount || isNaN(amount) || amount <= 0) {
-                error.textContent = currentLanguage === 'ru' ? 'Введите корректную сумму' : 'Enter a valid amount';
-                error.classList.add('show');
-                return;
+            if (!hasAmount && descLen >= 10) {
+              error.textContent = 'Нужно указать сумму сделки';
+              error.classList.add('show');
+              return;
             }
-            if (desc.length < 10) {
-                error.textContent = currentLanguage === 'ru' ? 'Описание должно содержать минимум 10 символов' : 'Description must be at least 10 characters';
-                error.classList.add('show');
-                return;
+            if (descLen < 10) {
+              error.textContent = 'Описание должно содержать минимум 10 символов';
+              error.classList.add('show');
+              return;
             }
 
-            const data = {
-                action: 'create_deal',
-                dealType: document.querySelector('input[name="dealType"]').value,
-                currency: document.querySelector('input[name="currency"]').value,
-                amount: parseFloat(amount),
-                description: desc,
-                userId
-            };
-            Telegram.WebApp.sendData(JSON.stringify(data));
             success.classList.add('show');
-            setTimeout(() => Telegram.WebApp.close(), 2000);
-        });
-
-        // Add requisites
-        document.getElementById('add-requisites').addEventListener('click', () => {
-            Telegram.WebApp.sendData(JSON.stringify({ action: 'add_requisites', userId }));
-        });
-
-        // Top up balance
-        document.getElementById('btn-top-up').addEventListener('click', () => {
-            window.open('https://t.me/Portaldeal?start=topup', '_blank');
-        });
-
-        // Back to profile
-        document.getElementById('back-to-profile-stats').addEventListener('click', () => {
-            activate('#screen-profile');
-        });
-
-        // Initialize stars
-        function createRandomStars() {
-            const starsContainer = document.querySelector('.stars');
-            for (let i = 0; i < 20; i++) {
-                const star = document.createElement('div');
-                star.className = 'star';
-                star.style.top = Math.random() * 100 + '%';
-                star.style.left = Math.random() * 100 + '%';
-                star.style.animationDelay = Math.random() * 3 + 's';
-                starsContainer.appendChild(star);
-            }
+          });
         }
+
+        function activate(targetSelector) {
+          buttons.forEach(btn => {
+            const isActive = btn.getAttribute('data-target') === targetSelector;
+            btn.classList.toggle('active', isActive);
+            if (isActive) btn.setAttribute('aria-current', 'page');
+            else btn.removeAttribute('aria-current');
+          });
+
+          const desktopNavButtons = document.querySelectorAll('.nav-link');
+          desktopNavButtons.forEach(btn => {
+            const isActive = btn.getAttribute('data-target') === targetSelector;
+            btn.classList.toggle('active', isActive);
+          });
+
+          screens.forEach(section => {
+            const isActive = '#' + section.id === targetSelector;
+            section.classList.toggle('active', isActive);
+            if (isActive) resetScreenAnimations(section);
+          });
+        }
+
+        function resetScreenAnimations(screen) {
+          if (screen.id === 'screen-profile') {
+            const profileHeader = screen.querySelector('.profile-header');
+            const profileStats = screen.querySelector('.profile-stats');
+            const profileActions = screen.querySelector('.profile-actions');
+            const avatarCircle = screen.querySelector('.avatar-circle');
+            if (profileHeader) { profileHeader.style.animation = 'none'; profileHeader.offsetHeight; profileHeader.style.animation = 'fadeInUp 0.8s ease-out 0.2s forwards'; }
+            if (avatarCircle) { avatarCircle.style.animation = 'none'; avatarCircle.offsetHeight; avatarCircle.style.animation = 'scaleIn 0.6s ease-out 0.4s forwards'; }
+            if (profileStats) { profileStats.style.animation = 'none'; profileStats.offsetHeight; profileStats.style.animation = 'fadeInUp 0.8s ease-out 0.6s forwards'; }
+            if (profileActions) { profileActions.style.animation = 'none'; profileActions.offsetHeight; profileActions.style.animation = 'fadeInUp 0.8s ease-out 0.8s forwards'; }
+          }
+          if (screen.id === 'screen-statistics') {
+            const formHeader = screen.querySelector('.form-header');
+            const cards = screen.querySelectorAll('.card');
+            const buttons = screen.querySelectorAll('.btn-primary, .btn-secondary');
+            if (formHeader) { formHeader.style.animation = 'none'; formHeader.offsetHeight; formHeader.style.animation = 'fadeInDown 0.8s ease-out 0.1s forwards'; }
+            cards.forEach((card, index) => { card.style.animation = 'none'; card.offsetHeight; card.style.animation = `fadeInUp 0.8s ease-out ${0.3 + index * 0.2}s forwards`; });
+            buttons.forEach((button, index) => { button.style.animation = 'none'; button.offsetHeight; button.style.animation = `fadeInUp 0.6s ease-out ${0.5 + index * 0.1}s forwards`; });
+          }
+          const staggerElements = screen.querySelectorAll('.stagger-animation');
+          staggerElements.forEach(container => {
+            const children = container.children;
+            Array.from(children).forEach((child, index) => {
+              child.style.animation = 'none';
+              child.offsetHeight;
+              child.style.animation = `fadeInUp 0.6s ease-out ${0.1 * (index + 1)}s forwards`;
+            });
+          });
+        }
+
+        tabbar.addEventListener('click', function (e) {
+          const btn = e.target.closest('button');
+          if (!btn || !btn.getAttribute('data-target')) return;
+          activate(btn.getAttribute('data-target'));
+        });
+
+        document.addEventListener('click', function (e) {
+          const navBtn = e.target.closest('[data-target]');
+          if (navBtn) {
+            activate(navBtn.getAttribute('data-target'));
+          } else {
+            const ext = e.target.closest('[data-external]');
+            if (ext) window.open(ext.getAttribute('data-external'), '_blank');
+          }
+        });
+
+        window.toggleFaq = function(button) {
+          const answer = button.nextElementSibling;
+          document.querySelectorAll(".faq-answer").forEach(ans => ans.classList.remove("show"));
+          if (!answer.classList.contains("show")) answer.classList.add("show");
+        }
+
+        function createRandomStars() {
+          const starsContainer = document.querySelector(".stars");
+          for (let i = 0; i < 20; i++) {
+            const star = document.createElement("div");
+            star.className = "star";
+            star.style.top = Math.random() * 100 + "%";
+            star.style.left = Math.random() * 100 + "%";
+            star.style.animationDelay = Math.random() * 3 + "s";
+            starsContainer.appendChild(star);
+          }
+        }
+
         createRandomStars();
 
-        // Initialize language and profile data
-        switchLanguage(currentLanguage);
-        fetchProfileData();
+        const translations = {
+          ru: {
+            profile: 'Профиль',
+            statistics: 'Статистика',
+            balance: 'Баланс',
+            'deals-completed': 'Сделок завершено',
+            'top-up-balance': 'Пополнить баланс',
+            'top-up-description': 'Добавить средства на счет',
+            'statistics-description': 'Подробная информация о ваших сделках',
+            'language-settings': 'Язык интерфейса',
+            'back-to-profile': 'Назад к профилю',
+            'statistics-title': 'Статистика',
+            'statistics-subtitle': 'Подробная информация о ваших сделках',
+            'general-stats': 'Общая статистика',
+            'total-amount': 'Общая сумма транзакций',
+            'recent-deals': 'Последние сделки',
+            'faq-title': 'FAQ',
+            'faq-q1': 'Как начать торговать подарками?',
+            'faq-a1': 'Чтобы начать торговать подарками, просто нажмите кнопку "Создать сделку" и следуйте процессу создания сделки. Вам нужно будет подключить свой Telegram аккаунт и подтвердить свою личность.',
+            'faq-q2': 'Что делать, если у меня проблема со сделкой?',
+            'faq-a2': 'Если у вас возникнут проблемы со сделкой, наша служба поддержки доступна 24/7 для решения любых вопросов. Вы можете связаться с нами через чат поддержки в приложении.',
+            'faq-q3': 'Почему стоит использовать бота для торговли подарками?',
+            'faq-a3': 'Наш бот предлагает несколько ключевых преимуществ: удобный интерфейс, который делает торговлю простой. Безопасные транзакции для защиты ваших средств и подарков. Широкий выбор подарков. Отличная поддержка клиентов. Это самый простой и безопасный способ торговать подарками в Telegram.'
+          },
+          en: {
+            profile: 'Profile',
+            statistics: 'Statistics',
+            balance: 'Balance',
+            'deals-completed': 'Deals completed',
+            'top-up-balance': 'Top up balance',
+            'top-up-description': 'Add funds to account',
+            'statistics-description': 'Detailed information about your deals',
+            'language-settings': 'Interface language',
+            'back-to-profile': 'Back to profile',
+            'statistics-title': 'Statistics',
+            'statistics-subtitle': 'Detailed information about your deals',
+            'general-stats': 'General statistics',
+            'total-amount': 'Total transaction amount',
+            'recent-deals': 'Recent deals',
+            'faq-title': 'FAQ',
+            'faq-q1': 'How do I start trading gifts?',
+            'faq-a1': 'To start trading gifts, simply click the "Create Deal" button and follow the deal creation process. You\'ll need to connect your Telegram account and verify your identity.',
+            'faq-q2': 'What if I have a problem with a trade?',
+            'faq-a2': 'If you encounter any issues with a trade, our support team is available 24/7 to help resolve any problems. You can contact us through the support chat in the app.',
+            'faq-q3': 'Why should I use bot for trading gifts?',
+            'faq-a3': 'Our bot offers several key benefits: A user-friendly interface that makes trading simple. Secure transactions to protect your funds and gifts. A wide variety of gifts to choose from. Excellent customer support to assist you whenever needed. It\'s the easiest and safest way to trade gifts within Telegram.'
+          }
+        };
+
+        let currentLanguage = 'ru';
+
+        function switchLanguage(language) {
+          currentLanguage = language;
+          const texts = translations[language];
+          Object.keys(texts).forEach(key => {
+            const elements = document.querySelectorAll(`[data-i18n="${key}"]`);
+            elements.forEach(el => {
+              if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') el.placeholder = texts[key];
+              else el.textContent = texts[key];
+            });
+          });
+        }
+
+        const topUpBtn = document.getElementById('btn-top-up');
+        if (topUpBtn) {
+          topUpBtn.addEventListener('click', () => {
+            window.open('http://t.me/send?start=IVJoB5pJLAob', '_blank');
+          });
+        }
+
+        const backToProfileStatsBtn = document.getElementById('back-to-profile-stats');
+        if (backToProfileStatsBtn) {
+          backToProfileStatsBtn.addEventListener('click', () => {
+            activate('#screen-profile');
+          });
+        }
+
+        document.addEventListener('click', (e) => {
+          const option = e.target.closest('.cs-option');
+          if (option && option.getAttribute('data-value')) {
+            const langCode = option.getAttribute('data-value');
+            if (document.getElementById('screen-profile').classList.contains('active')) {
+              switchLanguage(langCode);
+            }
+          }
+        });
+      })();
     </script>
-</body>
+  </body>
 </html>
