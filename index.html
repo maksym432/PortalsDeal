@@ -2,10 +2,14 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, i            <!-- Floating decorative elements -->
+            <div class="floating-elements">
+              <div class="floating-icon nft-icon">🐸</div>
+              <div class="floating-icon nft-icon">👜</div>
+              <div class="floating-icon nft-icon">💎</div>
+            </div>
     <title>PortalsDeal - Безопасные сделки в Telegram</title>
     <link rel="stylesheet" href="styles.css" />
-    <!-- Floating decorative elements moved to body for better rendering -->
   </head>
   <body>
     <!-- Stars animation background -->
@@ -13,22 +17,30 @@
       <div class="star" style="top: 20%; left: 15%; animation-delay: 0s"></div>
       <div class="star" style="top: 35%; left: 80%; animation-delay: 1s"></div>
       <div class="star" style="top: 60%; left: 25%; animation-delay: 2s"></div>
-      <div class="star" style="top: 80%; left: 70%; animation-delay: 0.5s"></div>
-      <div class="star" style="top: 10%; left: 60%; animation-delay: 1.5s"></div>
-      <div class="star" style="top: 45%; left: 10%; animation-delay: 2.5s"></div>
-      <div class="star" style="top: 75%; left: 90%; animation-delay: 0.8s"></div>
-      <div class="star" style="top: 25%; left: 45%; animation-delay: 1.8s"></div>
-    </div>
-
-    <div class="floating-elements">
-      <div class="floating-icon nft-icon">🐸</div>
-      <div class="floating-icon nft-icon">👜</div>
-      <div class="floating-icon nft-icon">💎</div>
-      <div class="floating-icon">⭐</div>
-      <div class="floating-icon">📱</div>
+      <div
+        class="star"
+        style="top: 80%; left: 70%; animation-delay: 0.5s"
+      ></div>
+      <div
+        class="star"
+        style="top: 10%; left: 60%; animation-delay: 1.5s"
+      ></div>
+      <div
+        class="star"
+        style="top: 45%; left: 10%; animation-delay: 2.5s"
+      ></div>
+      <div
+        class="star"
+        style="top: 75%; left: 90%; animation-delay: 0.8s"
+      ></div>
+      <div
+        class="star"
+        style="top: 25%; left: 45%; animation-delay: 1.8s"
+      ></div>
     </div>
 
     <main>
+
       <!-- Home Screen -->
       <section id="screen-home" class="screen active" aria-labelledby="tab-home">
         <div class="container">
@@ -48,18 +60,42 @@
 
           <!-- Main Header Section -->
           <header class="header">
+
             <!-- Mobile mockup -->
             <div class="mobile-mockup">
               <div class="mobile-screen">
                 <div class="mobile-header">
                   <span>9:41</span>
                   <div style="display: flex; gap: 4px">
-                    <div style="width: 4px; height: 4px; background: white; border-radius: 50%;"></div>
-                    <div style="width: 14px; height: 8px; border: 1px solid white; border-radius: 2px;"></div>
+                    <div
+                      style="
+                        width: 4px;
+                        height: 4px;
+                        background: white;
+                        border-radius: 50%;
+                      "
+                    ></div>
+                    <div
+                      style="
+                        width: 14px;
+                        height: 8px;
+                        border: 1px solid white;
+                        border-radius: 2px;
+                      "
+                    ></div>
                   </div>
                 </div>
+
                 <div class="collections-title">Collections All items</div>
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; font-size: 10px;">
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 15px;
+                    font-size: 10px;
+                  "
+                >
                   <span style="color: #999">Search by ID</span>
                   <div style="display: flex; gap: 6px">
                     <span>Activity</span>
@@ -67,8 +103,10 @@
                     <span>🔽</span>
                   </div>
                 </div>
+
                 <div class="item-grid">
                   <div class="item-card">
+                    �
                     <div class="item-price">3,050 TON</div>
                   </div>
                   <div class="item-card yellow">
@@ -80,12 +118,25 @@
                     <div class="item-price">Gift Box</div>
                   </div>
                   <div class="item-card purple">🔮</div>
-                  <div class="item-card" style="background: linear-gradient(135deg, #4dabf7 0%, #37b24d 100%);">
+                  <div
+                    class="item-card"
+                    style="
+                      background: linear-gradient(135deg, #4dabf7 0%, #37b24d 100%);
+                    "
+                  >
                     📁
                   </div>
                 </div>
               </div>
             </div>
+
+            <!-- Floating decorative elements -->
+            <div class="floating-elements">
+              <div class="floating-icon">⭐</div>
+              <div class="floating-icon">📱</div>
+            </div>
+
+
 
             <!-- Menu buttons integrated into header -->
             <div class="menu-wrap">
@@ -105,11 +156,17 @@
                 </button>
               </div>
             </div>
+            
+
           </header>
+
 
           <!-- FAQ Section -->
           <section class="faq-section">
+
+
             <h3 class="faq-title" data-i18n="faq-title">FAQ</h3>
+
             <div class="faq-list">
               <button class="faq-item" onclick="toggleFaq(this)" data-i18n="faq-q1">
                 Как начать торговать подарками?
@@ -121,6 +178,7 @@
                   аккаунт и подтвердить свою личность.
                 </p>
               </div>
+
               <button class="faq-item" onclick="toggleFaq(this)" data-i18n="faq-q2">
                 Что делать, если у меня проблема со сделкой?
               </button>
@@ -130,6 +188,7 @@
                   для решения любых вопросов. Вы можете связаться с нами через чат поддержки в приложении.
                 </p>
               </div>
+
               <button class="faq-item secondary" onclick="toggleFaq(this)" data-i18n="faq-q3">
                 Почему стоит использовать бота для торговли подарками?
               </button>
@@ -153,6 +212,7 @@
             <h1 class="form-title">PortalsDeal</h1>
             <p class="form-subtitle">Безопасные сделки в Telegram</p>
           </div>
+          
           <div class="form-wrap">
             <div class="card">
               <h2 id="create-title">✨ Создать сделку</h2>
@@ -216,6 +276,7 @@
             <h1 class="form-title">PortalsDeal</h1>
             <p class="form-subtitle">Безопасные сделки в Telegram</p>
           </div>
+          
           <div class="form-wrap">
             <div class="card">
               <h2 id="req-title" style="display:flex;align-items:center;gap:10px;">
@@ -266,6 +327,8 @@
               <p class="profile-id">ID: #123456</p>
             </div>
           </div>
+
+          <!-- Balance and Stats Section -->
           <div class="profile-stats">
             <div class="stat-card balance-card">
               <div class="stat-icon">💰</div>
@@ -282,6 +345,8 @@
               </div>
             </div>
           </div>
+
+          <!-- Quick Actions -->
           <div class="profile-actions">
             <button class="action-card primary-action" id="btn-top-up">
               <div class="action-icon">💳</div>
@@ -291,6 +356,7 @@
               </div>
               <div class="action-arrow">→</div>
             </button>
+            
             <button class="action-card" id="btn-statistics" data-target="#screen-statistics">
               <div class="action-icon">📊</div>
               <div class="action-content">
@@ -300,6 +366,8 @@
               <div class="action-arrow">→</div>
             </button>
           </div>
+
+          <!-- Settings Section -->
           <div class="profile-settings">
             <div class="settings-card">
               <h3 data-i18n="language-settings">Язык интерфейса</h3>
@@ -336,6 +404,7 @@
             <h1 class="form-title" data-i18n="statistics-title">Статистика</h1>
             <p class="form-subtitle" data-i18n="statistics-subtitle">Подробная информация о ваших сделках</p>
           </div>
+          
           <div class="form-wrap">
             <div class="card">
               <h2 data-i18n="general-stats">Общая статистика</h2>
@@ -356,6 +425,7 @@
                 </div>
               </div>
             </div>
+            
             <div class="card" style="margin-top: 2rem;">
               <h2 data-i18n="recent-deals">Последние сделки</h2>
               <div class="transactions-list stagger-animation">
@@ -384,6 +454,7 @@
                   <div class="transaction-status success">Завершена</div>
                 </div>
               </div>
+              
               <div class="actions">
                 <button type="button" class="btn-wide btn-secondary" id="back-to-profile-stats" data-i18n="back-to-profile">
                   Назад к профилю
@@ -409,8 +480,9 @@
 
           trigger.addEventListener('click', () => {
             const expanded = cs.getAttribute('aria-expanded') === 'true';
+            // Close others first
             document.querySelectorAll('.custom-select[aria-expanded="true"]').forEach(el => { 
-              if (el !== cs) el.setAttribute('aria-expanded', 'false'); 
+              if (el !== cs) el.setAttribute('aria-expanded','false'); 
             });
             cs.setAttribute('aria-expanded', String(!expanded));
           });
@@ -419,7 +491,8 @@
             const option = e.target.closest('.cs-option');
             if (!option) return;
             list.querySelectorAll('.cs-option').forEach(o => o.classList.toggle('selected', o === option));
-            const optEmoji = option.querySelector('.emoji')?.textContent || '';
+            // Update visible value and emoji
+            const optEmoji = (option.querySelector('.emoji') && option.querySelector('.emoji').textContent) || '';
             const triggerEmojiSpan = trigger.querySelector('.emoji');
             if (triggerEmojiSpan) triggerEmojiSpan.textContent = optEmoji;
             valueSpan.textContent = option.textContent.replace(optEmoji, '').trim();
@@ -464,45 +537,95 @@
         }
 
         function activate(targetSelector) {
+          // Toggle active tab in mobile tabbar
           buttons.forEach(btn => {
             const isActive = btn.getAttribute('data-target') === targetSelector;
             btn.classList.toggle('active', isActive);
-            if (isActive) btn.setAttribute('aria-current', 'page');
-            else btn.removeAttribute('aria-current');
+            if (isActive) {
+              btn.setAttribute('aria-current', 'page');
+            } else {
+              btn.removeAttribute('aria-current');
+            }
           });
-
+          
+          // Toggle active nav in desktop navigation
           const desktopNavButtons = document.querySelectorAll('.nav-link');
           desktopNavButtons.forEach(btn => {
             const isActive = btn.getAttribute('data-target') === targetSelector;
             btn.classList.toggle('active', isActive);
           });
-
+          
+          // Toggle screens with animation reset
           screens.forEach(section => {
             const isActive = '#' + section.id === targetSelector;
             section.classList.toggle('active', isActive);
-            if (isActive) resetScreenAnimations(section);
+            
+            if (isActive) {
+              // Reset animations for the active screen
+              resetScreenAnimations(section);
+            }
           });
         }
 
         function resetScreenAnimations(screen) {
+          // Reset profile animations if it's profile screen
           if (screen.id === 'screen-profile') {
             const profileHeader = screen.querySelector('.profile-header');
             const profileStats = screen.querySelector('.profile-stats');
             const profileActions = screen.querySelector('.profile-actions');
             const avatarCircle = screen.querySelector('.avatar-circle');
-            if (profileHeader) { profileHeader.style.animation = 'none'; profileHeader.offsetHeight; profileHeader.style.animation = 'fadeInUp 0.8s ease-out 0.2s forwards'; }
-            if (avatarCircle) { avatarCircle.style.animation = 'none'; avatarCircle.offsetHeight; avatarCircle.style.animation = 'scaleIn 0.6s ease-out 0.4s forwards'; }
-            if (profileStats) { profileStats.style.animation = 'none'; profileStats.offsetHeight; profileStats.style.animation = 'fadeInUp 0.8s ease-out 0.6s forwards'; }
-            if (profileActions) { profileActions.style.animation = 'none'; profileActions.offsetHeight; profileActions.style.animation = 'fadeInUp 0.8s ease-out 0.8s forwards'; }
+            
+            if (profileHeader) {
+              profileHeader.style.animation = 'none';
+              profileHeader.offsetHeight; // Trigger reflow
+              profileHeader.style.animation = 'fadeInUp 0.8s ease-out 0.2s forwards';
+            }
+            
+            if (avatarCircle) {
+              avatarCircle.style.animation = 'none';
+              avatarCircle.offsetHeight;
+              avatarCircle.style.animation = 'scaleIn 0.6s ease-out 0.4s forwards';
+            }
+            
+            if (profileStats) {
+              profileStats.style.animation = 'none';
+              profileStats.offsetHeight;
+              profileStats.style.animation = 'fadeInUp 0.8s ease-out 0.6s forwards';
+            }
+            
+            if (profileActions) {
+              profileActions.style.animation = 'none';
+              profileActions.offsetHeight;
+              profileActions.style.animation = 'fadeInUp 0.8s ease-out 0.8s forwards';
+            }
           }
+          
+          // Reset form animations for settings and statistics screens
           if (screen.id === 'screen-statistics') {
             const formHeader = screen.querySelector('.form-header');
             const cards = screen.querySelectorAll('.card');
             const buttons = screen.querySelectorAll('.btn-primary, .btn-secondary');
-            if (formHeader) { formHeader.style.animation = 'none'; formHeader.offsetHeight; formHeader.style.animation = 'fadeInDown 0.8s ease-out 0.1s forwards'; }
-            cards.forEach((card, index) => { card.style.animation = 'none'; card.offsetHeight; card.style.animation = `fadeInUp 0.8s ease-out ${0.3 + index * 0.2}s forwards`; });
-            buttons.forEach((button, index) => { button.style.animation = 'none'; button.offsetHeight; button.style.animation = `fadeInUp 0.6s ease-out ${0.5 + index * 0.1}s forwards`; });
+            
+            if (formHeader) {
+              formHeader.style.animation = 'none';
+              formHeader.offsetHeight;
+              formHeader.style.animation = 'fadeInDown 0.8s ease-out 0.1s forwards';
+            }
+            
+            cards.forEach((card, index) => {
+              card.style.animation = 'none';
+              card.offsetHeight;
+              card.style.animation = `fadeInUp 0.8s ease-out ${0.3 + index * 0.2}s forwards`;
+            });
+            
+            buttons.forEach((button, index) => {
+              button.style.animation = 'none';
+              button.offsetHeight;
+              button.style.animation = `fadeInUp 0.6s ease-out ${0.5 + index * 0.1}s forwards`;
+            });
           }
+          
+          // Reset stagger animations for transaction lists
           const staggerElements = screen.querySelectorAll('.stagger-animation');
           staggerElements.forEach(container => {
             const children = container.children;
@@ -514,28 +637,47 @@
           });
         }
 
+        // Tab bar navigation
         tabbar.addEventListener('click', function (e) {
           const btn = e.target.closest('button');
-          if (!btn || !btn.getAttribute('data-target')) return;
-          activate(btn.getAttribute('data-target'));
+          if (!btn) return;
+          const target = btn.getAttribute('data-target');
+          if (!target) return;
+          activate(target);
         });
 
+        // Menu buttons navigation
         document.addEventListener('click', function (e) {
           const navBtn = e.target.closest('[data-target]');
-          if (navBtn) {
-            activate(navBtn.getAttribute('data-target'));
-          } else {
+          if (!navBtn) {
             const ext = e.target.closest('[data-external]');
-            if (ext) window.open(ext.getAttribute('data-external'), '_blank');
+            if (ext) { 
+              window.open(ext.getAttribute('data-external'), '_blank'); 
+            }
+            return;
           }
+          const target = navBtn.getAttribute('data-target');
+          if (!target) return;
+          activate(target);
         });
 
+        // FAQ toggle functionality
         window.toggleFaq = function(button) {
           const answer = button.nextElementSibling;
-          document.querySelectorAll(".faq-answer").forEach(ans => ans.classList.remove("show"));
-          if (!answer.classList.contains("show")) answer.classList.add("show");
+          const isOpen = answer.classList.contains("show");
+
+          // Close all other FAQ answers
+          document.querySelectorAll(".faq-answer").forEach((ans) => {
+            ans.classList.remove("show");
+          });
+
+          // Toggle current answer
+          if (!isOpen) {
+            answer.classList.add("show");
+          }
         }
 
+        // Add interactive star animation
         function createRandomStars() {
           const starsContainer = document.querySelector(".stars");
           for (let i = 0; i < 20; i++) {
@@ -548,8 +690,21 @@
           }
         }
 
+        // Initialize stars
         createRandomStars();
 
+        // Add hover effects to point items
+        document.querySelectorAll(".point-item").forEach((item) => {
+          item.addEventListener("mouseenter", function () {
+            this.style.transform = "translateY(-5px) scale(1.02)";
+          });
+
+          item.addEventListener("mouseleave", function () {
+            this.style.transform = "translateY(0) scale(1)";
+          });
+        });
+
+        // Language switching functionality
         const translations = {
           ru: {
             profile: 'Профиль',
@@ -604,15 +759,21 @@
         function switchLanguage(language) {
           currentLanguage = language;
           const texts = translations[language];
+          
+          // Update all translatable elements
           Object.keys(texts).forEach(key => {
             const elements = document.querySelectorAll(`[data-i18n="${key}"]`);
             elements.forEach(el => {
-              if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') el.placeholder = texts[key];
-              else el.textContent = texts[key];
+              if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                el.placeholder = texts[key];
+              } else {
+                el.textContent = texts[key];
+              }
             });
           });
         }
 
+        // Top up balance navigation
         const topUpBtn = document.getElementById('btn-top-up');
         if (topUpBtn) {
           topUpBtn.addEventListener('click', () => {
@@ -620,17 +781,21 @@
           });
         }
 
+        // Back to profile navigation
         const backToProfileStatsBtn = document.getElementById('back-to-profile-stats');
+        
         if (backToProfileStatsBtn) {
           backToProfileStatsBtn.addEventListener('click', () => {
             activate('#screen-profile');
           });
         }
 
+        // Language switching for profile settings
         document.addEventListener('click', (e) => {
           const option = e.target.closest('.cs-option');
           if (option && option.getAttribute('data-value')) {
             const langCode = option.getAttribute('data-value');
+            // Apply language immediately in profile
             if (document.getElementById('screen-profile').classList.contains('active')) {
               switchLanguage(langCode);
             }
