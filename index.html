@@ -10,6 +10,7 @@
             </div>
     <title>PortalsDeal - Безопасные сделки в Telegram</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
   </head>
   <body>
     <!-- Stars animation background -->
@@ -532,6 +533,23 @@
               return;
             }
 
+            // Собираем данные для отправки в бот через WebApp
+            const dealType = document.querySelector('#screen-create input[name="dealType"]').value;
+            const currency = document.querySelector('#screen-create input[name="currency"]').value;
+            const amount = parseFloat(amountInput.value.trim());
+            const description = descInput.value.trim();
+            const dataToSend = JSON.stringify({
+              action: 'create_deal',
+              dealType: dealType,
+              items: description,  // Используем описание как items для совместимости с кодом бота
+              currency: currency,
+              amount: amount
+            });
+
+            // Отправляем данные в бот
+            Telegram.WebApp.sendData(dataToSend);
+
+            // Показываем успех (бот отправит ссылку в чат)
             success.classList.add('show');
           });
         }
